@@ -4,7 +4,7 @@ import searchIcon from "../../assets/search-icon.svg";
 import { useGlobalContext } from "../../context";
 
 const SearchForm = () => {
-  const { setSearchTerm, setPage } = useGlobalContext();
+  const { width, setSearchTerm, setPage } = useGlobalContext();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,8 +22,8 @@ const SearchForm = () => {
       <div className="search-bar">
         <img src={searchIcon} />
         <input
-          type="text"
-          placeholder="Search free high-resolution photos"
+          type="search"
+          placeholder={width < 441 ? "Search free photos" : "Search free high-resolution photos"}
           name="search"
         />
       </div>

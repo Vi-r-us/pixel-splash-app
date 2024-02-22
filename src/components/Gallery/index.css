@@ -24,6 +24,10 @@
   }
 }
 
+.anim {
+  max-width: 20rem;
+}
+
 .load-more-btn {
   border: 2px solid var(--clr-input-text);
   border-radius: 10px;

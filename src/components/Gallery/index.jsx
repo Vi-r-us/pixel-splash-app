@@ -16,21 +16,21 @@ const Gallery = () => {
   if (isLoading) {
     return (
       <section className="gallery-section">
-        <Lottie animationData={loadingAnim} />
+        <Lottie className="anim" animationData={loadingAnim} />
       </section>
     );
   }
   if (isError) {
     return (
       <section className="gallery-section">
-        <Lottie animationData={errorAnim} />
+        <Lottie className="anim" animationData={errorAnim} />
       </section>
     );
   }
   if (pictures.length === 0) {
     return (
       <section className="gallery-section">
-        <Lottie animationData={noResultAnim} />
+        <Lottie className="anim" animationData={noResultAnim} />
       </section>
     );
   }
