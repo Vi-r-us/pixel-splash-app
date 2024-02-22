@@ -19,6 +19,9 @@ jobs:
       # VITE_API_KEY: fC1CRSb412cX19F4qDUI5Dw3jGSWXvuLGbOJxlCPw8o
 
     steps:
+      - name: Read The API KEY
+        run: echo "MY API_KEY ${{ secrets.VITE_API_KEY }}"
+
       - name: Checkout repo
         uses: actions/checkout@v2
 
