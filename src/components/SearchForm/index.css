@@ -1,0 +1,56 @@
+form {
+  background-color: var(--clr-gradient-background);
+  background-image: var(--clr-gradient);
+
+  border-radius: 2em;
+  max-height: 250px;
+  position: relative;
+
+  > img {
+    width: 750px;
+    max-height: 250px;
+    object-fit: contain;
+    margin-inline: auto;
+    border-radius: 2em;
+  }
+
+  .search-bar {
+    width: 90%;
+    max-width: 750px;
+    margin-inline: auto;
+
+    background-color: var(--clr-input-background);
+    border-radius: 10vh;
+
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    justify-content: start;
+
+    position: absolute;
+    bottom: -24px;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+
+    padding: 0.75em 1.2em;
+
+    img {
+      height: 24px;
+      width: 24px;
+    }
+
+    input {
+      flex: 1;
+      border: none;
+      outline: 0;
+      background-color: var(--clr-input-background);
+      color: var(--clr-input-text);
+    }
+  }
+}
+
+form > img,
+.search-bar img {
+  filter: var(--filter-img);
+}
