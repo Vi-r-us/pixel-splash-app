@@ -6,7 +6,8 @@ on:
       - main
 
 env:
-  VITE_API_KEY: fC1CRSb412cX19F4qDUI5Dw3jGSWXvuLGbOJxlCPw8o
+  VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
+  # VITE_API_KEY: fC1CRSb412cX19F4qDUI5Dw3jGSWXvuLGbOJxlCPw8o
 
 jobs:
   build:
@@ -14,7 +15,8 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      VITE_API_KEY: fC1CRSb412cX19F4qDUI5Dw3jGSWXvuLGbOJxlCPw8o
+      VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
+      # VITE_API_KEY: fC1CRSb412cX19F4qDUI5Dw3jGSWXvuLGbOJxlCPw8o
 
     steps:
       - name: Checkout repo
@@ -31,7 +33,8 @@ jobs:
       - name: Build project
         run: npm run build
         env:
-          VITE_API_KEY: fC1CRSb412cX19F4qDUI5Dw3jGSWXvuLGbOJxlCPw8o
+          VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
+          # VITE_API_KEY: fC1CRSb412cX19F4qDUI5Dw3jGSWXvuLGbOJxlCPw8o
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v2
