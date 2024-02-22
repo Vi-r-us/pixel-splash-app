@@ -7,7 +7,6 @@ on:
 
 env:
   VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
-  # VITE_API_KEY: fC1CRSb412cX19F4qDUI5Dw3jGSWXvuLGbOJxlCPw8o
 
 jobs:
   build:
@@ -16,12 +15,8 @@ jobs:
 
     env:
       VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
-      # VITE_API_KEY: fC1CRSb412cX19F4qDUI5Dw3jGSWXvuLGbOJxlCPw8o
 
     steps:
-      - name: Read The API KEY
-        run: echo "MY API_KEY ${{ secrets.VITE_API_KEY }}"
-
       - name: Checkout repo
         uses: actions/checkout@v2
 
@@ -37,7 +32,6 @@ jobs:
         run: npm run build
         env:
           VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
-          # VITE_API_KEY: fC1CRSb412cX19F4qDUI5Dw3jGSWXvuLGbOJxlCPw8o
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v2
