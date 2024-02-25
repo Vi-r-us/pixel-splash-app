@@ -11,6 +11,9 @@
   --clr-glass-bg: rgba(255, 255, 255, 0.15);
   --clr-glass-bs: rgba(31, 38, 135, 0.37);
 
+  --clr-glass-bg-1: rgba(255, 255, 255, 0.55);
+  --clr-glass-bs-2: rgba(31, 38, 135, 0.5);
+
   --clr-input-background: #faf9f6;
   --clr-input-text: #202020;
 
@@ -28,6 +31,9 @@
 
   --clr-glass-bg: rgba(0, 0, 0, 0.4);
   --clr-glass-bs: rgba(0, 0, 0, 0.42);
+
+  --clr-glass-bg-1: rgba(0, 0, 0, 0.6);
+  --clr-glass-bs-2: rgba(0, 0, 0, 0.6);
 
   --clr-input-background: #202020;
   --clr-input-text: #faf9f6;
@@ -61,8 +67,11 @@
   box-sizing: border-box;
 }
 * {
-  transition: all .2s linear;
+  transition: all 0.2s linear;
   margin: 0;
+}
+html {
+  scroll-behavior: smooth;
 }
 body {
   line-height: 1.5;
@@ -102,7 +111,9 @@ main {
   min-height: 100vh;
 }
 
-li, ul, a {
+li,
+ul,
+a {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -122,11 +133,52 @@ main {
   padding: 2em 1em;
   display: flex;
   flex-direction: column;
-  gap: 3em;
+  gap: 2em;
   margin-inline: auto;
   max-width: 82rem;
 
   @media (min-width: 600px) {
-    gap: 2em
+    gap: 2em;
+  }
+}
+
+.back-to-top {
+  position: sticky;
+  bottom: 1em;
+  left: 100%;
+
+  padding: 1em 1em;
+  margin-left: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+
+  background: var(--clr-glass-bg-1);
+  box-shadow: 0 8px 32px 0 var(--clr-glass-bs-2);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50vh;
+
+  .material-symbols-rounded {
+    scale: 1.2;
+    color: var(--clr-input-text);
+  }
+
+  ::before {
+    content: "";
+    max-width: 0;
+  }
+}
+
+.back-to-top:hover {
+  padding: 1em 2em;
+  ::before {
+    content: "Back To Top";
+    vertical-align: super;
+
+    font-family: var(--ff-default);
+    font-size: 1rem;
+    margin-right: 0.5em;
   }
 }

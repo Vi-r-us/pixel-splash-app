@@ -23,7 +23,11 @@ const SearchForm = () => {
         <img src={searchIcon} />
         <input
           type="search"
-          placeholder={width < 441 ? "Search free photos" : "Search free high-resolution photos"}
+          placeholder={
+            width < 441
+              ? "Search free photos"
+              : "Search free high-resolution photos"
+          }
           name="search"
         />
       </div>

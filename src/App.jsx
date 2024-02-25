@@ -8,8 +8,15 @@ function App() {
       <Navbar />
       <SearchForm />
       <Gallery />
+      <BackToTop />
     </main>
   );
 }
+
+const BackToTop = () => (
+  <a href="#" className="back-to-top">
+    <span className="material-symbols-rounded">arrow_upward</span>
+  </a>
+);
 
 export default App;
